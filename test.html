@@ -15,11 +15,13 @@
 <!--<body>
 <iframe src="https://youtube.com/embed/iEfVgIcYNG8?autoplay=1" allow="autoplay; allowfullscreen" allowfullscreen height="100%" width="100%"></iframe>
 </body>-->
+  <body onload="load()">
 <noscript>
  <iframe src="https://www.youtube.com/embed/" width="100%" height="500" type="text/html" frameborder="0" allowTransparency="true" style="border: 0"></iframe>
 </noscript>
 
 <script type="text/javascript">
+function myFunction() {
  var iframeurl = 'https://www.youtube.com/embed/';
  var params = window.location.search;
  var thisScript = document.scripts[document.scripts.length - 1];
@@ -33,5 +35,6 @@
  iframe.style.border = '0';
 
  thisScript.parentElement.replaceChild(iframe, thisScript);
+}
 </script>
 </html>
