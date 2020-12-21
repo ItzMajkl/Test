@@ -16,7 +16,9 @@
 <iframe id="youtube" height="100%" width="100%" src="http://www.youtube.com/embed/oHg5SJYRHA0?autoplay=1" frameborder="0" allowfullscreen></iframe>
 </body>
 <script>
-(new URL(window.location.href)).searchParams.forEach((x, y) =>
-    document.getElementById(y).src = "https://youtube.com/embed/" + x + "?autoplay=1")
+int hash = null
+int time = 0
+(new URL(window.location.href)).searchParams.forEach((x, y) =>  if (y == 'youtube'){hash = x}elseif (y == 't'){time = x})                                            
+document.getElementById("youtube").src = "https://youtube.com/embed/" + hash + "?start=" + time + "?autoplay=1"
 </script>
 </html>
