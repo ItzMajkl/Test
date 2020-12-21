@@ -12,29 +12,25 @@
         width: 100vw;
     }
     </style>
-<!--<body>
-<iframe src="https://youtube.com/embed/iEfVgIcYNG8?autoplay=1" allow="autoplay; allowfullscreen" allowfullscreen height="100%" width="100%"></iframe>
-</body>-->
-  <body onload="load()">
-<noscript>
- <iframe src="https://www.youtube.com/embed/" width="100%" height="500" type="text/html" frameborder="0" allowTransparency="true" style="border: 0"></iframe>
-</noscript>
+<body>
+<iframe id="youtube" src="https://youtube.com/embed/iEfVgIcYNG8?autoplay=1" allow="autoplay; allowfullscreen" allowfullscreen height="100%" width="100%"></iframe>
+</body>
 
-<script type="text/javascript">
-function myFunction() {
- var iframeurl = 'https://www.youtube.com/embed/';
- var params = window.location.search;
- var thisScript = document.scripts[document.scripts.length - 1];
- var iframe = document.createElement('iframe');
- iframe.setAttribute('src', iframeurl + params);
- iframe.setAttribute('width', '100%');
- iframe.setAttribute('height', 500);
- iframe.setAttribute('type', 'text/html');
- iframe.setAttribute('frameborder', 0);
- iframe.setAttribute('allowTransparency', 'true');
- iframe.style.border = '0';
+<script>
+function querySt(ji) {
 
- thisScript.parentElement.replaceChild(iframe, thisScript);
+    hu = window.location.search.substring(1);
+    gy = hu.split("&");
+
+    for (i=0;i<gy.length;i++) {
+        ft = gy[i].split("=");
+        if (ft[0] == ji) {
+            return ft[1];
+        }
+    }
 }
+var koko = querySt("koko");
+console.log(koko);
+document.getElementById('youtube').src = koko;
 </script>
 </html>
