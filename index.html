@@ -18,7 +18,13 @@
 <script>
 var hash = null;
 var time = 0;
-(new URL(window.location.href)).searchParams.forEach((x, y) =>  if (y == 'youtube'){var hash = x}else{var time = x});                                            
-document.getElementById("youtube").src = "https://youtube.com/embed/" + hash + "?start=" + time + "?autoplay=1"
+(new URL(window.location.href)).searchParams.forEach(function(x, y) {
+        if (y === "youtube") {
+            hash2 = x;
+        }else{
+          time = x;
+        }
+    })
+   document.getElementById("youtube").value = "https://youtube.com/embed/" + hash + "?start=" + time + "&autoplay=1"
 </script>
 </html>
