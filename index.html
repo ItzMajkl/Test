@@ -16,9 +16,9 @@
 <iframe id="youtube" height="100%" width="100%" src="" frameborder="0" allowfullscreen></iframe>
 </body>
 <script>
-var hash = null
-var time = 0
-(new URL(window.location.href)).searchParams.forEach((x, y) =>  if (y == 'youtube'){var hash = x}else{var time = x})                                            
+var hash = null;
+var time = 0;
+(new URL(window.location.href)).searchParams.forEach((x, y) =>  if (y == 'youtube'){var hash = x}else{var time = x});                                            
 document.getElementById("youtube").src = "https://youtube.com/embed/" + hash + "?start=" + time + "?autoplay=1"
 </script>
 </html>
