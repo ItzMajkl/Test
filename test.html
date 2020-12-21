@@ -2,10 +2,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <style type="text/css">
     body {
-        margin: 0;
+        margin: 0;            /* Reset default margin */
     }
-  </style>
+    iframe {
+        display: block;       /* iframes are inline by default */
+        background: #000;
+        border: none;         /* Reset default border */
+        height: 100vh;        /* Viewport-relative units */
+        width: 100vw;
+    }
+    </style>
 <body>
-<iframe src="https://youtube.com/embed/iEfVgIcYNG8?rel=1&autoplay=1" allow="autoplay; allowfullscreen" allowfullscreen height="100%" width="100%"></iframe>
+<iframe src="https://youtube.com/embed/iEfVgIcYNG8?rel=0&autoplay=1" allow="autoplay; allowfullscreen" allowfullscreen height="100%" width="100%"></iframe>
 </body>
 </html>
