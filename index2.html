@@ -1,0 +1,31 @@
+<html lang="en">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <style type="text/css">
+    body {
+        margin: 0;            /* Reset default margin */
+    }
+    iframe {
+        display: block;       /* iframes are inline by default */
+        background: #000;
+        border: none;         /* Reset default border */
+        height: 100vh;        /* Viewport-relative units */
+        width: 100vw;
+    }
+    </style>
+<body>
+  <video controls="" autoplay="" name="media">
+    <source id = "player" src="http://173.244.215.163:8200/" type="audio/mpeg">
+ </video>
+</body>
+
+<script>
+var hash = null;
+var time = 0;
+(new URL(window.location.href)).searchParams.forEach(function(x, y) {
+        if (y === "url") {
+            hash = x;
+        }
+    })
+   document.getElementById("player").src = hash
+</script>
+</html>
