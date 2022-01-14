@@ -1,0 +1,30 @@
+<html lang="en">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <style type="text/css">
+    body {
+        margin: 0;            /* Reset default margin */
+    }
+    iframe {
+        display: block;       /* iframes are inline by default */
+        background: #000;
+        border: none;         /* Reset default border */
+        height: 100vh;        /* Viewport-relative units */
+        width: 100vw;
+    }
+    </style>
+<body>
+<iframe id="youtube" src="https://youtube.com/embed/7ExB9z0yaqM?autoplay=1" height="100%" width="100%" src="" frameborder="0" allowfullscreen></iframe>
+</body>
+<script>
+var hash = null;
+var time = 0;
+(new URL(window.location.href)).searchParams.forEach(function(x, y) {
+        if (y === "youtube") {
+            hash = x;
+        }else{
+          time = x;
+        }
+    })
+   document.getElementById("youtube").src = "https://youtube.com/embed/" + hash + "?autoplay=1&start=" + time + ""
+</script>
+</html>
