@@ -13,18 +13,18 @@
     }
     </style>
 <body>
-<iframe id="youtube" src="https://youtube.com/embed/7ExB9z0yaqM?autoplay=1" height="100%" width="100%" src="" frameborder="0" allowfullscreen></iframe>
+<iframe id="twitch" src="https://player.twitch.tv/?autoplay=true&channel=dallas&parent=hollywood" height="100%" width="100%" src="" frameborder="0" allowfullscreen></iframe>
 </body>
 <script>
 var hash = null;
 var time = 0;
 (new URL(window.location.href)).searchParams.forEach(function(x, y) {
-        if (y === "youtube") {
+        if (y === "twitch") {
             hash = x;
         }else{
           time = x;
         }
     })
-   document.getElementById("youtube").src = "https://youtube.com/embed/" + hash + "?autoplay=1&start=" + time + ""
+   document.getElementById("youtube").src = "https://twitch.tv/embed/" + hash + "?autoplay=1&start=" + time + ""
 </script>
 </html>
