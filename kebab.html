@@ -13,18 +13,18 @@
     }
     </style>
 <body>
-<iframe id="twitch" src="https://player.twitch.tv/?channel=mikejepan&muted=true&parent=thesimworld.com&parent=www.thesimworld.com" height="100%" width="100%" src="" frameborder="0" allowfullscreen></iframe>
+<iframe id="youtube" src="https://twitch.com/embed/" height="100%" width="100%" src="" frameborder="0" allowfullscreen></iframe>
 </body>
 <script>
 var hash = null;
 var time = 0;
 (new URL(window.location.href)).searchParams.forEach(function(x, y) {
-        if (y === "twitch") {
+        if (y === "youtube") {
             hash = x;
         }else{
           time = x;
         }
     })
-      document.getElementById("twitch").src = "https://player.twitch.tv/?channel=mikejepan&muted=true&parent=thesimworld.com"
+   document.getElementById("youtube").src = "https://twitch.com/embed/" + hash + "?autoplay=1&start=" + time + ""
 </script>
 </html>
