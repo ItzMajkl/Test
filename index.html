@@ -13,18 +13,24 @@
     }
     </style>
 <body>
-<iframe id="youtube" src="https://youtube.com/embed/7ExB9z0yaqM?autoplay=1" height="100%" width="100%" src="" frameborder="0" allowfullscreen></iframe>
+<iframe id="twitch" src="https://player.twitch.tv/?autoplay=true&channel=dallas&parent=hollywood" allow="autoplay; allowfullscreen" allowfullscreen height="100%" width="100%"></iframe>
 </body>
+
 <script>
-var hash = null;
-var time = 0;
-(new URL(window.location.href)).searchParams.forEach(function(x, y) {
-        if (y === "youtube") {
-            hash = x;
-        }else{
-          time = x;
+function querySt(ji) {
+
+    hu = window.location.search.substring(1);
+    gy = hu.split("&");
+
+    for (i=0;i<gy.length;i++) {
+        ft = gy[i].split("=");
+        if (ft[0] == ji) {
+            return ft[1];
         }
-    })
-   document.getElementById("youtube").src = "https://youtube.com/embed/" + hash + "?autoplay=1&start=" + time + ""
+    }
+}
+var koko = querySt("koko");
+console.log(koko);
+document.getElementById('twitch').src = koko;
 </script>
 </html>
