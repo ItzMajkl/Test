@@ -1,28 +1,30 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Twitch Stream Test</title>
-	<meta name="generator" content="BBEdit 13.5" />
-</head>
+<html lang="en">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <style type="text/css">
+    body {
+        margin: 0;            /* Reset default margin */
+    }
+    iframe {
+        display: block;       /* iframes are inline by default */
+        background: #000;
+        border: none;         /* Reset default border */
+        height: 100vh;        /* Viewport-relative units */
+        width: 100vw;
+    }
+    </style>
 <body>
-    <!-- Add a placeholder for the Twitch embed -->
-    <div>TOP</div>
-    <div id="twitch-embed"></div>
-
-    <!-- Load the Twitch embed script -->
-    <script src="https://embed.twitch.tv/embed/v1.js"></script>
-
-    <!-- Create a Twitch.Embed object that will render within the "twitch-embed" root element. -->
-    <script type="text/javascript">
-      new Twitch.Embed("twitch-embed", {
-        width: 854,
-        height: 480,
-        channel: "carlsagan42",
-        // only needed if your site is also embedded on embed.example.com and othersite.example.com 
-        parent: ["raw.githubusercontent.com", "exeljb.duckdns.org", "10.172.0.149", "htmlpreview.github.io"]
-      });
-    </script>
- <div>BOTTOM</div>
-
+<iframe id="youtube" src="https://player.twitch.tv/?channel=7ExB9z0yaqM&parent=itzmajkl.github.io" height="575" width="950" frameborder="0" scrolling="no" allowfullscreen="true"></iframe>
 </body>
+<script>
+var hash = null;
+var time = 0;
+(new URL(window.location.href)).searchParams.forEach(function(x, y) {
+        if (y === "youtube") {
+            hash = x;
+        }else{
+          time = x;
+        }
+    })
+   document.getElementById("youtube").src = "https://player.twitch.tv/embed/?channel=" + hash + "&parent=itzmajkl.github.io""
+</script>
 </html>
