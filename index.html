@@ -16,26 +16,20 @@
 <iframe id="youtube" src="https://player.twitch.tv/?channel=7ExB9z0yaqM&parent=itzmajkl.github.io" height="575" width="950" frameborder="0" scrolling="no" allowfullscreen="true"></iframe>
 </body>
 <script>
-var url;
 function querySt(ji) {
+
     hu = window.location.search.substring(1);
     gy = hu.split("&");
+
     for (i=0;i<gy.length;i++) {
         ft = gy[i].split("=");
         if (ft[0] == ji) {
             return ft[1];
         }
     }
-    var SurveyKey = querySt("k");
-    url = "https://player.twitch.tv/?channel=" + SurveyKey;
-
-    insertInPage();
 }
-
-function insertInPage() {
-    var content = "<a href=\"" + url + "\">link</a>"
-  
-  document.getElementById("youtube").innerHtml = content;
-}
+var koko = querySt("koko");
+console.log(koko);
+document.getElementById('youtube').src = koko;
 </script>
 </html>
