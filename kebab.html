@@ -13,18 +13,18 @@
     }
     </style>
 <body>
-<iframe id="twitch" src="https://player.twitch.tv/?autoplay=true&channel=mikejepan&parent=hollywood" height="100%" width="100%" src="" frameborder="0" allowfullscreen></iframe>
+<iframe id="youtube" src="https://player.twitch.tv/?channel=7ExB9z0yaqM&parent=itzmajkl.github.io" height="575" width="950" frameborder="0" scrolling="no" allowfullscreen="true"></iframe>
 </body>
 <script>
 var hash = null;
 var time = 0;
 (new URL(window.location.href)).searchParams.forEach(function(x, y) {
-        if (y === "twitch") {
+        if (y === "youtube") {
             hash = x;
         }else{
           time = x;
         }
     })
-      document.getElementById("twitch").src = "https://player.twitch.tv/?autoplay=true&channel=mikejepan&parent=hollywood"
+   document.getElementById("youtube").src = "https://player.twitch.tv/embed/?channel=" + hash + "&parent=itzmajkl.github.io""
 </script>
 </html>
